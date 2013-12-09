@@ -2,6 +2,9 @@ language: c
 compiler:
   - gcc
   - clang
+before_install:
+ - sudo apt-get update -qq
+ - sudo apt-get install hwloc-dev libtool-dev pth pkg-config
 script:
     ./autogen.sh &&
     ./configure &&
